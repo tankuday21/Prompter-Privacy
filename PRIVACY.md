@@ -1,124 +1,65 @@
-# Privacy Policy for Prompter Pro
+# Privacy Policy for Prompter Pro  
+**Last Updated: September 2025**
 
-**Last Updated:** December 2024
+## Introduction  
+Prompter Pro (“we,” “our,” or “us”) is committed to protecting your privacy. This policy explains how your information is handled when you use our browser extension.
 
-## Introduction
+## What We Collect  
+We do not collect, store, or transmit any personal data. Everything happens locally on your device.  
 
-Prompter Pro ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect your information when you use our Chrome extension.
+* **No Accounts:** We don’t require sign-in or create user profiles.  
+* **No Analytics:** We don’t track usage, events, or behavior.  
+* **No Server Storage:** We do not run servers that store your data.  
 
-## What Data We Collect
+## How Prompter Pro Works  
+* **Local Processing:** Prompt enhancement logic runs locally in your browser.  
+* **Direct API Calls:** When you choose to enhance text, your browser extension makes direct calls to AI providers (e.g., OpenAI, Anthropic, Google, etc.) using your API keys.  
+* **We Don’t See Your Data:** We don’t proxy, receive, or store your prompts or results on our servers.  
+* **Your Choice:** You configure which providers to use and supply your own API keys.  
 
-### Website Content (Selected Text)
-- **What:** Text that you select on web pages for enhancement
-- **Why:** To provide the core functionality of AI-powered prompt enhancement
-- **How:** Only when you actively select text and choose to enhance it
-- **Storage:** Text is processed through AI APIs but not permanently stored by us
+## Local Data on Your Device  
+* **What:** API keys and extension settings/preferences.  
+* **Where:** Stored locally in your browser (e.g., Chrome storage).  
+* **Control:** Only you can access, edit, or remove this data on your device.  
 
-### Extension Settings
-- **What:** Your preferences, API keys, and configuration settings
-- **Why:** To personalize your experience and remember your choices
-- **Storage:** Stored locally in your browser using Chrome's storage API
-- **Access:** Only accessible to you on your device
+## What We Do NOT Collect  
+We do not collect:  
+* Personal information (names, emails, addresses)  
+* Financial, health, or sensitive categories of data  
+* Authentication credentials  
+* Location data or browsing history  
+* Selected text content beyond direct calls you initiate to AI providers  
+* Any data from websites you visit outside your explicit enhancement action  
 
-### Usage Statistics
-- **What:** Basic usage data (number of enhancements, API calls made)
-- **Why:** To improve the extension and monitor performance
-- **Storage:** Stored locally in your browser
-- **Access:** Only accessible to you on your device
+## Data Sharing and Third Parties  
+* **No Third-Party Sharing:** We don’t sell, rent, or share your data.  
+* **AI Providers Only (Direct):** When you enhance text, the selected text goes directly from your browser to the AI provider you chose, using your API keys. Your interactions are governed by those providers’ privacy policies.  
 
-## What We Do NOT Collect
+## Data Security  
+* **Local-Only:** Your keys and settings are stored locally and are not accessible to us.  
+* **Transport Security:** Direct API requests to providers use HTTPS.  
+* **No Server Exposure:** We can’t expose what we never receive.  
 
-We do NOT collect, store, or transmit:
-- Personal identification information (names, emails, addresses)
-- Health information
-- Financial or payment information
-- Authentication credentials
-- Personal communications
-- Location data
-- Web browsing history
-- User activity beyond selected text
-- Any data from websites you visit
+## International Data Transfers  
+Not applicable. We do not collect or store data. If you use an AI provider, any transfers occur directly between your browser and that provider.  
 
-## How We Use Your Data
+## Data Retention  
+* **Selected Text:** Not retained by us.  
+* **Settings and API Keys:** Persist locally until you remove them or uninstall the extension.  
+* **Server-Side Retention:** None—no servers.  
 
-### Selected Text Processing
-- **Purpose:** To enhance your prompts using AI services
-- **Process:** Text is sent to AI APIs (OpenAI, Anthropic, Google Gemini, Cohere) for processing
-- **Retention:** Text is not stored by us after processing
-- **Security:** All API communications use HTTPS encryption
+## Your Rights and Control  
+* View, update, or remove your settings and API keys in the extension.  
+* Clear data via your browser settings.  
+* Uninstalling the extension removes all local data stored by the extension.  
 
-### Local Storage
-- **Purpose:** To remember your settings and preferences
-- **Location:** Stored locally in your browser
-- **Access:** Only you can access this data
-- **Retention:** Until you uninstall the extension or clear browser data
+## Children’s Privacy  
+Prompter Pro is not intended for children under 13. We do not knowingly collect personal information from children.  
 
-## Data Sharing and Third Parties
+## Changes to This Policy  
+We may update this policy periodically. Continued use of Prompter Pro after changes indicates acceptance. The “Last Updated” date reflects the latest revision.  
 
-### AI Service Providers
-- **Who:** OpenAI, Anthropic, Google Gemini, Cohere
-- **What:** Only the text you select for enhancement
-- **Why:** To provide AI-powered prompt enhancement
-- **Control:** You provide your own API keys and control access
+## Contact Information  
+* **Email:** udaytank21@gmail.com  
 
-### No Third-Party Sharing
-- We do not sell, rent, or share your data with third parties
-- We do not use your data for advertising or marketing
-- We do not transfer data to unrelated services
-
-## Data Security
-
-### Local Storage
-- All data is stored locally in your browser
-- We cannot access your stored data remotely
-- Data is protected by Chrome's built-in security features
-
-### API Communications
-- All external communications use HTTPS encryption
-- API keys are stored locally and never transmitted to us
-- No data is stored on our servers
-
-## Your Rights and Control
-
-### Access and Control
-- You can view all stored data in the extension's options page
-- You can export your data at any time
-- You can clear all stored data through the extension settings
-- You can revoke API access by removing your API keys
-
-### Data Deletion
-- Uninstalling the extension removes all local data
-- You can manually clear data through Chrome's extension management
-- No data remains on our servers after deletion
-
-## Children's Privacy
-
-Our extension is not intended for children under 13. We do not knowingly collect personal information from children under 13.
-
-## Changes to This Policy
-
-We may update this Privacy Policy from time to time. We will notify users of any material changes through the extension or our website.
-
-## Contact Information
-
-If you have questions about this Privacy Policy or our data practices, please contact us at:
-- Email: privacy@prompterpro.com
-- Website: https://prompterpro.com
-
-## Compliance
-
-This extension complies with:
-- Chrome Web Store Developer Program Policies
-- General Data Protection Regulation (GDPR) principles
-- California Consumer Privacy Act (CCPA) requirements
-
-## Data Retention
-
-- **Selected Text:** Not retained after processing
-- **Settings and Preferences:** Retained locally until extension uninstall
-- **Usage Statistics:** Retained locally until extension uninstall
-- **API Keys:** Stored locally, never transmitted to our servers
-
----
-
-**Note:** This privacy policy applies only to the Prompter Pro Chrome extension. It does not cover any third-party websites or services you may use while browsing the web.
+> Note: This policy applies to the Prompter Pro extension only. Your usage of AI providers is subject to their respective privacy policies.  
