@@ -1,0 +1,437 @@
+/* =======================
+   PREMIUM ANIMATIONS & MICRO-INTERACTIONS
+   ======================= */
+
+/* Enhanced Button Animations */
+.btn-primary,
+.btn-secondary,
+.enhance-btn {
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+.btn-primary::before,
+.btn-secondary::before,
+.enhance-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease-out;
+  z-index: 1;
+}
+
+.btn-primary:hover::before,
+.btn-secondary:hover::before,
+.enhance-btn:hover::before {
+  left: 100%;
+}
+
+/* Floating Button Premium Animations */
+#prompter-pro-floating-btn {
+  animation: floatingGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatingGlow {
+  0% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 20px rgba(99, 102, 241, 0.3);
+  }
+  100% {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4), 0 0 30px rgba(99, 102, 241, 0.5);
+  }
+}
+
+/* Text Selection Animation */
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  animation: selectionPulse 0.3s ease-out;
+}
+
+@keyframes selectionPulse {
+  0% {
+    background: rgba(99, 102, 241, 0.1);
+  }
+  100% {
+    background: rgba(99, 102, 241, 0.3);
+  }
+}
+
+/* Input Focus Animations */
+.input-wrapper:focus-within {
+  animation: inputFocusGlow 0.3s ease-out;
+}
+
+@keyframes inputFocusGlow {
+  0% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: var(--glow-primary);
+  }
+}
+
+/* Card Hover Micro-interactions - Simplified for Premium Feel */
+.setting-card,
+.option-card,
+.provider-option,
+.style-option {
+  transition: border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.setting-card:hover {
+  /* Removed transform and scale for stability */
+  box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
+
+.option-card:hover,
+.provider-option:hover,
+.style-option:hover {
+  /* Removed transform for stability */
+  box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.15);
+}
+
+/* Loading Animation Enhancements */
+.spinner {
+  animation: spinGlow 1s linear infinite;
+}
+
+@keyframes spinGlow {
+  0% { 
+    transform: rotate(0deg);
+    filter: drop-shadow(0 0 5px rgba(99, 102, 241, 0.5));
+  }
+  100% { 
+    transform: rotate(360deg);
+    filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.8));
+  }
+}
+
+/* Navigation Link Animations */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-gradient);
+  transition: width 0.3s ease-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active::after {
+  width: 100%;
+  background: white;
+}
+
+/* Toast Slide Animations */
+.toast {
+  animation: toastSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toast.removing {
+  animation: toastSlideOut 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes toastSlideIn {
+  0% {
+    transform: translateX(100%) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes toastSlideOut {
+  0% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%) scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* Checkbox Animation */
+.checkmark {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-option input[type="checkbox"]:checked + .checkmark {
+  animation: checkboxCheck 0.3s ease-out;
+}
+
+@keyframes checkboxCheck {
+  0% {
+    transform: scale(0.8);
+    background: var(--tertiary-bg);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    background: var(--accent-gradient);
+  }
+}
+
+/* Radio Button Simplified Effects */
+.provider-option,
+.style-option,
+.theme-option {
+  position: relative;
+  /* Removed overflow: hidden to prevent layout issues */
+}
+
+/* Removed complex ripple effects that could cause glitches */
+
+/* Progress Bar Animation */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  z-index: 10000;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.progress-bar.active {
+  opacity: 1;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent-gradient);
+  transform: translateX(-100%);
+  animation: progressSlide 2s ease-in-out infinite;
+}
+
+@keyframes progressSlide {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Typewriter Effect for Enhanced Text (disabled by default to avoid clipping) */
+.enhanced-text {
+  overflow: visible;
+  border-right: none;
+  white-space: normal;
+  animation: none;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  0%, 50% {
+    border-color: var(--accent-primary);
+  }
+  51%, 100% {
+    border-color: transparent;
+  }
+}
+
+/* Particle Effect Background */
+.container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(99, 102, 241, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+  animation: particleFloat 20s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  33% {
+    transform: translateY(-10px) translateX(5px);
+  }
+  66% {
+    transform: translateY(5px) translateX(-5px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+/* Hover Scale Effect for Icons */
+.logo-icon,
+.stat-icon,
+.provider-icon,
+.style-icon {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-icon:hover,
+.stat-card:hover .stat-icon,
+.provider-option:hover .provider-icon,
+.style-option:hover .style-icon {
+  transform: scale(1.1) rotateY(10deg);
+}
+
+/* Smooth Page Transitions */
+.tab-content {
+  animation: pageSlideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes pageSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced Shadow on Scroll */
+.header {
+  transition: box-shadow 0.3s ease-out;
+}
+
+.header.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Gradient Border Animation */
+.input-wrapper.focus-gradient {
+  position: relative;
+  background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary), var(--accent-primary));
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+  padding: 2px;
+  border-radius: var(--radius-lg);
+}
+
+.input-wrapper.focus-gradient #userInput {
+  background: var(--secondary-bg);
+  border: none;
+  border-radius: calc(var(--radius-lg) - 2px);
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Magnetic Button Effect - disabled for stable elegant behavior */
+.enhance-btn {
+  /* Remove transform-based hover animation for stability */
+}
+
+/* Hover pull animation removed */
+
+/* Stagger Animation for Lists */
+.nav-list li {
+  animation: listItemSlideIn 0.5s ease-out;
+  animation-fill-mode: both;
+}
+
+.nav-list li:nth-child(1) { animation-delay: 0.1s; }
+.nav-list li:nth-child(2) { animation-delay: 0.2s; }
+.nav-list li:nth-child(3) { animation-delay: 0.3s; }
+.nav-list li:nth-child(4) { animation-delay: 0.4s; }
+.nav-list li:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes listItemSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Pulse Animation for Active Elements */
+.nav-link.active .nav-icon,
+.enhance-btn.loading .btn-icon {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .container::before {
+    animation: none;
+  }
+  
+  .enhanced-text {
+    animation: none;
+    border-right: none;
+    white-space: normal;
+  }
+}

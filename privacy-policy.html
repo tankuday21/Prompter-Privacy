@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Prompter Pro | AI Prompt Enhancer</title>
+    <meta name="description" content="Privacy Policy for Prompter Pro - Learn how we protect your data and privacy while using our AI prompt enhancement browser extension.">
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/icon16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/icon32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="icons/icon48.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="icons/icon128.png">
+    
+    <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Privacy Policy Specific Styles */
+        .privacy-policy {
+            padding: 120px 0 80px;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+        }
+
+        .policy-header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 0;
+        }
+
+        .policy-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .policy-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .policy-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            color: var(--text-primary);
+            font-weight: 500;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .badge-icon {
+            width: 20px;
+            height: 20px;
+            color: var(--success-color);
+        }
+
+        .policy-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+        }
+
+        .policy-section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .policy-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .policy-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .policy-section h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 25px 0 15px;
+            color: var(--text-primary);
+        }
+
+        .policy-section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .policy-section ul {
+            margin: 15px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .policy-section li {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .policy-section li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .policy-section strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-icon {
+            width: 20px;
+            height: 20px;
+            color: var(--primary-color);
+        }
+
+        .policy-footer {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .policy-version {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-logo-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        .footer-logo-text {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .footer-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .privacy-policy {
+                padding: 100px 0 60px;
+            }
+
+            .policy-title {
+                font-size: 2.5rem;
+            }
+
+            .policy-content {
+                padding: 30px 20px;
+                margin: 0 20px;
+            }
+
+            .policy-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .policy-footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Background Elements -->
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    
+    <!-- Blob Elements -->
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    
+
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <img src="icons/icon48.png" alt="Prompter Pro" class="logo-icon">
+                    <span class="logo-text">Prompter Pro</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html#features" class="nav-link">Features</a>
+                <a href="index.html#how-it-works" class="nav-link">How It Works</a>
+                <a href="index.html#testimonials" class="nav-link">Testimonials</a>
+                <a href="index.html#faq" class="nav-link">FAQ</a>
+                <a href="index.html#integrations" class="nav-link">Integrations</a>
+                <a href="privacy-policy.html" class="nav-link">Privacy</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+                    <svg class="theme-icon light" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg class="theme-icon dark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+                <button class="btn-primary" onclick="installExtension()">Install Extension</button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" title="Toggle mobile menu">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Privacy Policy Content -->
+    <section class="privacy-policy">
+        <div class="container">
+            <div class="policy-header">
+                <h1 class="policy-title">Privacy Policy</h1>
+                <p class="policy-subtitle">Last updated: September 2025</p>
+                <div class="policy-badge">
+                    <svg class="badge-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Your Privacy Matters</span>
+                </div>
+            </div>
+
+            <div class="policy-content">
+                <div class="policy-section">
+                    <h2>Introduction</h2>
+                    <p>Prompter Pro ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our browser extension and related services.</p>
+                    <p>By using Prompter Pro, you agree to the collection and use of information in accordance with this policy.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>Data Collection - We Collect Nothing</h2>
+                    <p><strong>Prompter Pro does not collect, store, or transmit any of your data.</strong> Everything happens locally on your computer.</p>
+                    
+                    <h3>What Stays on Your Device</h3>
+                    <ul>
+                        <li><strong>API Keys:</strong> Your API keys are stored locally in your browser extension</li>
+                        <li><strong>Extension Settings:</strong> Your preferences are saved locally on your device</li>
+                        <li><strong>Prompt Text:</strong> All text processing happens locally on your computer</li>
+                    </ul>
+
+                    <h3>What We Never Access</h3>
+                    <ul>
+                        <li><strong>No Data Collection:</strong> We don't collect any personal information, usage data, or analytics</li>
+                        <li><strong>No Server Storage:</strong> We don't have servers that store your information</li>
+                        <li><strong>No Tracking:</strong> We don't track your browsing activity or extension usage</li>
+                        <li><strong>No File Access:</strong> We don't access or read files on your device</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>How Prompter Pro Works</h2>
+                    <p>Since we don't collect any data, here's how Prompter Pro actually works:</p>
+                    <ul>
+                        <li><strong>Local Processing:</strong> All prompt enhancement happens locally on your computer</li>
+                        <li><strong>Direct API Calls:</strong> When you enhance prompts, the extension makes direct calls to AI providers using your API keys</li>
+                        <li><strong>No Data Transmission:</strong> We don't see, store, or process your prompts on our servers</li>
+                        <li><strong>Privacy by Design:</strong> The extension is built to work entirely offline except for the AI API calls you initiate</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>Data Processing - 100% Local</h2>
+                    <h3>Complete Local Processing</h3>
+                    <p><strong>All data processing happens on your computer.</strong> We don't have any servers or cloud infrastructure that processes your data.</p>
+                    
+                    <h3>AI Provider Integration</h3>
+                    <p>When you enhance prompts, the extension makes direct API calls to AI providers using your API keys:</p>
+                    <ul>
+                        <li><strong>Direct Connection:</strong> Your browser extension connects directly to AI providers (OpenAI, Anthropic, Google, etc.)</li>
+                        <li><strong>Your API Keys:</strong> All API calls use your personal API credentials</li>
+                        <li><strong>No Intermediary:</strong> We don't act as a middleman - your data goes directly to the AI provider</li>
+                        <li><strong>Provider Privacy:</strong> Your data is subject to the privacy policies of the AI providers you choose to use</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>Data Security - Not Applicable</h2>
+                    <p><strong>Since we don't collect or store any data, traditional data security measures don't apply.</strong> However, we ensure:</p>
+                    <ul>
+                        <li><strong>Local Storage Security:</strong> Your API keys and settings are stored securely in your browser's local storage</li>
+                        <li><strong>No Data Exposure:</strong> We can't expose your data because we don't have access to it</li>
+                        <li><strong>Extension Security:</strong> The extension code is designed with privacy and security in mind</li>
+                        <li><strong>Direct API Security:</strong> When you use AI providers, you benefit from their security measures</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>AI Provider Integration</h2>
+                    <p>Prompter Pro can work with various AI platforms (ChatGPT, Claude, Gemini, etc.) through your API keys:</p>
+                    <ul>
+                        <li><strong>Direct Integration:</strong> Your extension connects directly to AI providers using your API keys</li>
+                        <li><strong>No Data Sharing:</strong> We don't share your data because we don't have access to it</li>
+                        <li><strong>Provider Policies:</strong> Your interactions with AI platforms are governed by their respective privacy policies</li>
+                        <li><strong>Your Choice:</strong> You choose which AI providers to use and configure with your own API keys</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>Data Retention - Nothing to Retain</h2>
+                    <p><strong>We don't retain any data because we don't collect any data.</strong> Here's what happens locally:</p>
+                    <ul>
+                        <li><strong>Prompt Text:</strong> Processed locally and never stored anywhere</li>
+                        <li><strong>API Keys:</strong> Stored locally in your browser; you control when to remove them</li>
+                        <li><strong>Extension Settings:</strong> Stored locally on your device; you can reset anytime</li>
+                        <li><strong>No Server Storage:</strong> We have no servers to store data on</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>Your Complete Control</h2>
+                    <p><strong>You have complete control over your data because it never leaves your device.</strong> You can:</p>
+                    <ul>
+                        <li><strong>View Everything:</strong> All data is stored locally in your browser extension - you can see it all</li>
+                        <li><strong>Delete Anytime:</strong> Remove API keys and reset extension settings whenever you want</li>
+                        <li><strong>Full Control:</strong> Manage all extension settings and API key preferences locally</li>
+                        <li><strong>Complete Privacy:</strong> Your data never leaves your computer unless you choose to use AI providers</li>
+                        <li><strong>Uninstall Anytime:</strong> Remove the extension and all local data disappears</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>Children's Privacy</h2>
+                    <p>Prompter Pro is not intended for use by children under 13 years of age. Since we don't collect any personal information, there's no risk of collecting data from children. All data remains on the user's device.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>International Data Transfers - Not Applicable</h2>
+                    <p><strong>We don't transfer any data internationally because we don't collect or store any data.</strong> If you choose to use AI providers, any data transfers are between you and those providers directly, not through us.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>Changes to This Privacy Policy</h2>
+                    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by:</p>
+                    <ul>
+                        <li>Posting the new Privacy Policy on this page</li>
+                        <li>Updating the "Last updated" date at the top of this policy</li>
+                        <li>Providing notice through the extension when significant changes occur</li>
+                    </ul>
+                    <p>Your continued use of Prompter Pro after any changes constitutes acceptance of the updated policy.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>Contact Us</h2>
+                    <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>Email: udaytank21@gmail.com</span>
+                        </div>
+                        <!-- <div class="contact-item">
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7294C21.7209 20.9846 21.5573 21.2136 21.3521 21.4019C21.1469 21.5902 20.9046 21.7335 20.6408 21.8227C20.377 21.9119 20.0978 21.9454 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3146 6.72533 15.2661 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.09456 3.90347 2.12787 3.62476 2.21649 3.36152C2.30512 3.09828 2.44706 2.85669 2.63421 2.65189C2.82136 2.4471 3.04926 2.28369 3.30351 2.17162C3.55775 2.05956 3.83249 2.00131 4.10999 2H7.10999C7.59522 1.99522 8.06569 2.16708 8.43373 2.48353C8.80177 2.79999 9.04201 3.23945 9.10999 3.72C9.23662 4.68007 9.47144 5.62273 9.80999 6.53C9.94454 6.88792 9.97346 7.27675 9.89332 7.64939C9.81318 8.02203 9.62708 8.36073 9.35999 8.62L8.08999 9.89C9.51355 12.3955 11.6045 14.4865 14.11 15.91L15.38 14.64C15.6393 14.3729 15.978 14.1868 16.3506 14.1067C16.7233 14.0265 17.1121 14.0555 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8436 15.9518 22.0122 16.4296 22 16.92Z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>Phone: +1 (555) 123-4567</span>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="policy-section">
+                    <h2>GDPR Compliance - Not Applicable</h2>
+                    <p><strong>GDPR requirements don't apply to Prompter Pro because we don't process any personal data.</strong> Since all data remains on your device and we don't collect, store, or process any personal information, GDPR data processing rules are not relevant to our service.</p>
+                </div>
+
+                <div class="policy-section">
+                    <h2>California Privacy Rights (CCPA) - Not Applicable</h2>
+                    <p><strong>CCPA requirements don't apply to Prompter Pro because we don't collect, use, share, or sell any personal information.</strong> Since all data remains on your device and we don't have access to any personal information, California privacy rights regarding data collection are not relevant to our service.</p>
+                </div>
+            </div>
+
+            <div class="policy-footer">
+                <div class="back-to-home">
+                    <a href="index.html" class="btn-secondary">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Back to Home
+                    </a>
+                </div>
+                <div class="policy-version">
+                    <p>Version 1.0 - Effective September 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="icons/icon48.png" alt="Prompter Pro" class="logo-icon">
+                        <span class="logo-text">Prompter Pro</span>
+                    </div>
+                    <p>Transform simple ideas into professional prompts using advanced AI. Premium prompt engineering at your fingertips.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#integrations">Integrations</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#integrations">Integrations</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+
+                    </ul>
+                </div>
+                
+                <!-- <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Discord">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div> -->
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Prompter Pro. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="#terms">Terms</a>
+                    <a href="#cookies">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function installExtension() {
+            window.open('https://chromewebstore.google.com/detail/prompter-pro-prompt-enhan/pfnojkkcdohalkomjbanblhgdmleljei', '_blank');
+        }
+        
+        function toggleTheme() {
+            const body = document.body;
+            const themeToggle = document.getElementById('themeToggle');
+            
+            if (body.classList.contains('light-theme')) {
+                body.classList.remove('light-theme');
+                localStorage.setItem('theme', 'dark');
+                themeToggle.setAttribute('title', 'Switch to light theme');
+            } else {
+                body.classList.add('light-theme');
+                localStorage.setItem('theme', 'light');
+                themeToggle.setAttribute('title', 'Switch to dark theme');
+            }
+        }
+        
+        // Mobile menu functionality
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+        }
+        
+        // Close mobile menu when clicking on a link
+        function closeMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            
+            navMenu.classList.remove('active');
+            mobileMenuToggle.classList.remove('active');
+        }
+        
+        // Smooth scrolling for navigation links (only for same-page anchors)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    closeMobileMenu();
+                }
+            });
+        });
+        
+        // Mobile menu toggle event listener
+        document.getElementById('mobileMenuToggle').addEventListener('click', toggleMobileMenu);
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const navMenu = document.getElementById('navMenu');
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            
+            if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                closeMobileMenu();
+            }
+        });
+        
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Theme toggle functionality and init
+        document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            document.body.classList.add('light-theme');
+        }
+    </script>
+</body>
+</html>

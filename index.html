@@ -3,125 +3,868 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prompter Pro - AI Prompt Enhancement Chrome Extension</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f8f9fa;
-        }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.5em;
-        }
-        .subtitle {
-            text-align: center;
-            color: #7f8c8d;
-            font-size: 1.2em;
-            margin-bottom: 40px;
-        }
-        .feature {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #3498db;
-        }
-        .feature h3 {
-            color: #2c3e50;
-            margin-top: 0;
-        }
-        .cta-button {
-            display: inline-block;
-            background: #3498db;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            margin: 20px 10px;
-            transition: background 0.3s;
-        }
-        .cta-button:hover {
-            background: #2980b9;
-        }
-        .links {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
-        .links a {
-            color: #3498db;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-        .links a:hover {
-            text-decoration: underline;
-        }
-        .icon {
-            width: 64px;
-            height: 64px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 16px;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-        }
-    </style>
+    <title>Prompter Pro - AI Prompt Enhancer | Transform Ideas into Professional Prompts</title>
+    <meta name="description" content="Transform simple inputs into detailed, professional prompts using advanced AI. Premium prompt engineering at your fingertips.">
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/icon16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/icon32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="icons/icon48.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="icons/icon128.png">
+    
+    <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="icon">P</div>
-        <h1>Prompter Pro</h1>
-        <p class="subtitle">Transform simple inputs into detailed, professional prompts using advanced AI</p>
-        
-        <div class="feature">
-            <h3>🚀 AI-Powered Enhancement</h3>
-            <p>Leverage cutting-edge AI models including GPT-4, Claude, Gemini, and DeepSeek to transform your basic prompts into detailed, professional content.</p>
+    <!-- Floating Background Elements -->
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    
+    <!-- Blob Elements -->
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    
+
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="icons/icon48.png" alt="Prompter Pro" class="logo-icon">
+                <span class="logo-text">Prompter Pro</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#integrations" class="nav-link">Integrations</a>
+                <a href="privacy-policy.html" class="nav-link">Privacy</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+                    <svg class="theme-icon light" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg class="theme-icon dark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+                <button class="btn-primary" onclick="installExtension()">Install Extension</button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" title="Toggle mobile menu">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
         </div>
-        
-        <div class="feature">
-            <h3>🔒 Privacy-First Design</h3>
-            <p>Your data stays on your device. We don't collect, store, or transmit any personal information. All processing happens through your own API keys.</p>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-blobs">
+                    <div class="hero-blob"></div>
+                    <div class="hero-blob"></div>
+                    <div class="hero-blob"></div>
+                </div>
+                <div class="hero-badge">
+                    <svg class="badge-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    </svg>
+                    <span>AI-Powered Prompt Engineering</span>
+                </div>
+                <h1 class="hero-title">
+                    Transform Simple Ideas into
+                    <span class="gradient-text">Professional Prompts</span>
+                </h1>
+                <p class="hero-description">
+                    Prompter Pro enhances what you type in AI chat prompt boxes (ChatGPT, Claude, Gemini, Perplexity, etc.). It focuses only on the prompt input areas—not emails or docs where you write answers.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn-primary btn-large" onclick="installExtension()">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                        Get Started Free
+                    </button>
+                    <!-- <button class="btn-secondary btn-large" onclick="openDemo()">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        Try Demo
+                    </button> -->
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Prompts Enhanced</span>
+                    </div>
+                    <div class="stat-item">
+                        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L15.09 8.26L22 9L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="stat-number">4.9★</span>
+                        <span class="stat-label">User Rating</span>
+                    </div>
+                    <div class="stat-item">
+                        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label">Uptime</span>
+                    </div>
+                </div>
+            </div>
+                            <div class="hero-visual">
+                    <div class="hero-card">
+                        <div class="card-header">
+                            <div class="card-avatar">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="card-info">
+                                <h4>Your Idea</h4>
+                                <p>Write a blog post about AI</p>
+                            </div>
+                        </div>
+                        <div class="card-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="card-result">
+                            <div class="result-header">
+                                <h4>Enhanced Prompt</h4>
+                                <div class="result-badge">AI Enhanced</div>
+                            </div>
+                            <p class="result-text">
+                                "Write a comprehensive, engaging blog post about artificial intelligence that covers current trends, 
+                                practical applications, and future implications. Target audience: tech-savvy professionals and enthusiasts. 
+                                Include real-world examples and actionable insights. Tone: informative yet accessible. Length: 1500-2000 words."
+                            </p>
+                        </div>
+                    </div>
+                </div>
         </div>
-        
-        <div class="feature">
-            <h3>⚡ Seamless Integration</h3>
-            <p>Right-click on any selected text to enhance it instantly. Works on any website with our intuitive inline interface.</p>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Prompter Pro?</h2>
+                <p>Advanced AI technology meets intuitive design for the ultimate prompt engineering experience</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                            <rect x="14" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                            <rect x="3" y="14" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                            <rect x="14" y="14" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Multi-Provider Support</h3>
+                    <p>Works with ChatGPT, Claude, Gemini, Perplexity, and others via your API keys.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Privacy First</h3>
+                    <p>Your keys and text stay local. We don’t collect or store your content.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <polygon points="10,8 16,12 10,16" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Real-time Streaming</h3>
+                    <p>See enhancements applied instantly while you type in the prompt box.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                            <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Smart Context Detection</h3>
+                    <p>Understands the site and input area to enhance only your prompt text.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M12 3v18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>One-Click Enhancement</h3>
+                    <p>Instantly transform rough ideas into structured, professional prompts.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="3" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M7 21h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Beautiful Output Formatting</h3>
+                    <p>Clean headings, lists, and structure for easy copying into any AI chat.</p>
+                </div>
+            </div>
         </div>
-        
-        <div class="feature">
-            <h3>🎯 Professional Results</h3>
-            <p>Get structured, clear, and effective prompts that improve your productivity and content quality across all your writing tasks.</p>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Three simple steps to transform your ideas into professional prompts</p>
+            </div>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Input Your Idea</h3>
+                        <p>Type or paste your basic concept, idea, or rough prompt into the input field. No need to be perfect - just get your thoughts down.</p>
+                        <div class="step-example">
+                            <div class="example-input">
+                                <span class="example-label">Input:</span>
+                                <span class="example-text">"Write about AI"</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Add Provider Keys</h3>
+                        <p>Add your API keys for providers you use. Prompter Pro enhances only the prompt input areas on those sites.</p>
+                        <div class="step-example">
+                            <div class="style-options">
+                                <span class="style-option"><img src="icons/ai-models/chatgpt-icon.png" alt="ChatGPT" style="width:16px;height:16px;border-radius:3px;"> ChatGPT</span>
+                                <span class="style-option"><img src="icons/ai-models/claude-ai-icon.png" alt="Claude" style="width:16px;height:16px;border-radius:3px;"> Claude</span>
+                                <span class="style-option"><img src="icons/ai-models/google-gemini-icon.png" alt="Gemini" style="width:16px;height:16px;border-radius:3px;"> Gemini</span>
+                                <span class="style-option"><img src="icons/ai-models/perplexity-icon.png" alt="Perplexity" style="width:16px;height:16px;border-radius:3px;"> Perplexity</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Get Enhanced Results</h3>
+                        <p>Watch as AI transforms your input into a detailed, professional prompt with clear instructions, context, and structure.</p>
+                        <div class="step-example">
+                            <div class="example-output">
+                                <span class="example-label">Output:</span>
+                                <span class="example-text">"Write a comprehensive article about artificial intelligence, covering current developments, practical applications, and future implications..."</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <div style="text-align: center;">
-            <a href="https://chrome.google.com/webstore/detail/prompter-pro-ai-prompt-enhancer/ialdjnelalffpdogliifaiajfpfbphnp" class="cta-button">Install Extension</a>
-            <a href="PRIVACY.md" class="cta-button">Privacy Policy</a>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="use-cases">
+        <div class="container">
+            <div class="section-header">
+                <h2>Perfect For Every Use Case</h2>
+                <p>From content creation to technical documentation, Prompter Pro handles it all</p>
+            </div>
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="use-case-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Content Creation</h3>
+                    <p>Blog posts, articles, social media content, and marketing copy that engage and convert.</p>
+                    <ul class="use-case-list">
+                        <li>Blog post outlines</li>
+                        <li>Social media captions</li>
+                        <li>Email marketing</li>
+                        <li>Product descriptions</li>
+                    </ul>
+                </div>
+                
+                <div class="use-case-card">
+                    <div class="use-case-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 20L14 4M18 8L22 12L18 16M6 16L2 12L6 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Technical Writing</h3>
+                    <p>Documentation, tutorials, code comments, and technical specifications that are clear and comprehensive.</p>
+                    <ul class="use-case-list">
+                        <li>API documentation</li>
+                        <li>Code tutorials</li>
+                        <li>Technical guides</li>
+                        <li>System specifications</li>
+                    </ul>
+                </div>
+                
+                <div class="use-case-card">
+                    <div class="use-case-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 7L10 17L5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Business & Marketing</h3>
+                    <p>Professional communications, proposals, presentations, and strategic content that drives results.</p>
+                    <ul class="use-case-list">
+                        <li>Business proposals</li>
+                        <li>Marketing strategies</li>
+                        <li>Sales presentations</li>
+                        <li>Executive summaries</li>
+                    </ul>
+                </div>
+                
+                <div class="use-case-card">
+                    <div class="use-case-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Academic & Research</h3>
+                    <p>Research papers, thesis work, academic writing, and formal analysis with scholarly precision.</p>
+                    <ul class="use-case-list">
+                        <li>Research proposals</li>
+                        <li>Literature reviews</li>
+                        <li>Academic papers</li>
+                        <li>Methodology sections</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        
-        <div class="links">
-            <a href="PRIVACY.md">Privacy Policy</a>
-            <a href="README.md">Documentation</a>
-            <a href="https://github.com/yourusername/PrompterPro">GitHub Repository</a>
+    </section>
+
+    <!-- Integrations Section: insert after Use Cases -->
+    <section id="integrations" class="integrations">
+      <div class="container">
+        <div class="section-header">
+          <h2>Seamless Integrations</h2>
+          <p>Works wherever you write: across leading AI chat and search platforms</p>
         </div>
-    </div>
+        <div class="integrations-grid">
+          <div class="integration-card">
+            <div class="integration-icon">
+              <img src="icons/ai-models/chatgpt-icon.png" alt="ChatGPT" style="width:32px;height:32px;object-fit:contain;border-radius:6px;">
+            </div>
+            <h3>ChatGPT</h3>
+            <p>Enhance prompts directly in chat.openai.com</p>
+          </div>
+          <div class="integration-card">
+            <div class="integration-icon">
+              <img src="icons/ai-models/claude-ai-icon.png" alt="Claude" style="width:32px;height:32px;object-fit:contain;border-radius:6px;">
+            </div>
+            <h3>Claude</h3>
+            <p>Use Prompter Pro on claude.ai conversations</p>
+          </div>
+          <div class="integration-card">
+            <div class="integration-icon">
+              <img src="icons/ai-models/google-gemini-icon.png" alt="Gemini" style="width:32px;height:32px;object-fit:contain;border-radius:6px;">
+            </div>
+            <h3>Gemini</h3>
+            <p>Works on gemini.google.com chat experiences</p>
+          </div>
+          <div class="integration-card">
+            <div class="integration-icon">
+              <img src="icons/ai-models/perplexity-icon.png" alt="Perplexity" style="width:32px;height:32px;object-fit:contain;border-radius:6px;">
+            </div>
+            <h3>Perplexity</h3>
+            <p>Refine queries on perplexity.ai for better answers</p>
+          </div>
+          <div class="integration-card">
+            <div class="integration-icon">
+              <img src="icons/ai-models/deepseek-logo-icon.png" alt="DeepSeek" style="width:32px;height:32px;object-fit:contain;border-radius:6px;">
+            </div>
+            <h3>DeepSeek</h3>
+            <p>Use our enhancement with DeepSeek chats</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Users Say</h2>
+                <p>Join thousands of satisfied users who have transformed their content creation workflow</p>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonials-grid" id="testimonialsGrid">
+                    <!-- Original Set -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "Prompter Pro has completely revolutionized how I write. What used to take hours now takes minutes. The AI suggestions are incredibly intelligent and context-aware."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">P</div>
+                            <div class="author-info">
+                                <h4>Priya Sharma</h4>
+                                <p>Content Marketing Director</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "As a developer, I use Prompter Pro for everything from code documentation to technical blog posts. The templates are spot-on and save me hours of work."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">A</div>
+                            <div class="author-info">
+                                <h4>Arjun Patel</h4>
+                                <p>Senior Software Engineer</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "The privacy-first approach and local storage give me peace of mind. Plus, the results are consistently better than anything I've used before."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">M</div>
+                            <div class="author-info">
+                                <h4>Meera Reddy</h4>
+                                <p>Freelance Writer</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "Working in digital marketing, I need to create content quickly. Prompter Pro helps me generate professional prompts that convert better than my previous methods."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">R</div>
+                            <div class="author-info">
+                                <h4>Rahul Verma</h4>
+                                <p>Digital Marketing Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "As an academic researcher, I need precise prompts for my studies. Prompter Pro delivers exactly what I need with proper structure and clarity."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">D</div>
+                            <div class="author-info">
+                                <h4>Dr. Kavya Iyer</h4>
+                                <p>Research Scientist</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Duplicate Set for Infinite Scrolling -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "Prompter Pro has completely revolutionized how I write. What used to take hours now takes minutes. The AI suggestions are incredibly intelligent and context-aware."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">P</div>
+                            <div class="author-info">
+                                <h4>Priya Sharma</h4>
+                                <p>Content Marketing Director</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "As a developer, I use Prompter Pro for everything from code documentation to technical blog posts. The templates are spot-on and save me hours of work."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">A</div>
+                            <div class="author-info">
+                                <h4>Arjun Patel</h4>
+                                <p>Senior Software Engineer</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "The privacy-first approach and local storage give me peace of mind. Plus, the results are consistently better than anything I've used before."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">M</div>
+                            <div class="author-info">
+                                <h4>Meera Reddy</h4>
+                                <p>Freelance Writer</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "Working in digital marketing, I need to create content quickly. Prompter Pro helps me generate professional prompts that convert better than my previous methods."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">R</div>
+                            <div class="author-info">
+                                <h4>Rahul Verma</h4>
+                                <p>Digital Marketing Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "As an academic researcher, I need precise prompts for my studies. Prompter Pro delivers exactly what I need with proper structure and clarity."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">D</div>
+                            <div class="author-info">
+                                <h4>Dr. Kavya Iyer</h4>
+                                <p>Research Scientist</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+                        </div>
+                    </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Answers to common questions about using Prompter Pro</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Where do I paste my API keys?</h3>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Open the extension’s settings page and add your API keys for the models you use (e.g., OpenAI, Claude, Gemini). Keys are stored locally on your device.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Which sites does Prompter Pro work on?</h3>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Anywhere you write prompts: ChatGPT, Claude, Gemini, Perplexity and more. It also helps in docs, email, and CMS editors.</p>
+                        </div>
+                    </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Does my text leave my computer?</h3>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </div>
+                    <div class="faq-answer">
+                        <p>We don’t collect or store your content. The extension runs locally and only communicates with providers you configure via your API keys.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How does the AI enhancement work?</h3>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </div>
+                    <div class="faq-answer">
+                        <p>Prompter Pro uses advanced AI models to analyze your input and automatically enhance it with better structure, clarity, and detail. It adds context, improves grammar, and makes your prompts more effective for AI interactions.</p>
+                        </div>
+                    </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is Prompter Pro free to use?</h3>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </div>
+                    <div class="faq-answer">
+                        <p>Yes! Prompter Pro is completely free to use. You only need to provide your own API keys for the AI models you want to use. The extension itself doesn't charge any fees.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Prompts?</h2>
+                <p>Join thousands of users who are already creating better content with AI-powered prompt enhancement</p>
+                <div class="cta-actions">
+                    <button class="btn-primary btn-large" onclick="installExtension()">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                        Install Extension
+                    </button>
+                    <!-- <button class="btn-secondary btn-large" onclick="openDemo()">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        Try Demo
+                    </button> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="icons/icon48.png" alt="Prompter Pro" class="logo-icon">
+                        <span class="logo-text">Prompter Pro</span>
+                    </div>
+                    <p>Transform simple ideas into professional prompts using advanced AI. Premium prompt engineering at your fingertips.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#integrations">Integrations</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#integrations">Integrations</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <!-- <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Discord">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div> -->
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Prompter Pro. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="#terms">Terms</a>
+                    <a href="#cookies">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function installExtension() {
+            // Open Chrome Web Store for Prompter Pro extension
+            window.open('https://chromewebstore.google.com/detail/prompter-pro-prompt-enhan/pfnojkkcdohalkomjbanblhgdmleljei', '_blank');
+        }
+        
+        function toggleTheme() {
+            const body = document.body;
+            const themeToggle = document.getElementById('themeToggle');
+            
+            if (body.classList.contains('light-theme')) {
+                body.classList.remove('light-theme');
+                localStorage.setItem('theme', 'dark');
+                themeToggle.setAttribute('title', 'Switch to light theme');
+            } else {
+                body.classList.add('light-theme');
+                localStorage.setItem('theme', 'light');
+                themeToggle.setAttribute('title', 'Switch to dark theme');
+            }
+        }
+        
+        function openDemo() {
+            // Open a demo or the popup
+            if (chrome && chrome.action && chrome.action.openPopup) {
+                chrome.action.openPopup();
+            } else {
+                alert('Demo would open here. In a real extension, this would open the popup interface.');
+            }
+        }
+        
+        // Mobile menu functionality
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+        }
+        
+        // Close mobile menu when clicking on a link
+        function closeMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            
+            navMenu.classList.remove('active');
+            mobileMenuToggle.classList.remove('active');
+        }
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu when clicking on a link
+                    closeMobileMenu();
+                }
+            });
+        });
+        
+        // Mobile menu toggle event listener
+        document.getElementById('mobileMenuToggle').addEventListener('click', toggleMobileMenu);
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const navMenu = document.getElementById('navMenu');
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            
+            if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                closeMobileMenu();
+            }
+        });
+        
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Theme toggle functionality
+        document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+        
+        // Initialize theme from localStorage
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            document.body.classList.add('light-theme');
+        }
+        
+        // Infinite Scrolling Testimonials
+        const testimonialsGrid = document.getElementById('testimonialsGrid');
+        
+        // Pause animation on hover
+        testimonialsGrid.addEventListener('mouseenter', () => {
+            testimonialsGrid.style.animationPlayState = 'paused';
+        });
+        
+        testimonialsGrid.addEventListener('mouseleave', () => {
+            testimonialsGrid.style.animationPlayState = 'running';
+        });
+        
+
+        
+        // FAQ Functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all FAQ items
+                faqItems.forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
